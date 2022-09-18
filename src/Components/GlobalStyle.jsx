@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }
 html{
     font-size:62.5%;
@@ -45,4 +45,23 @@ a{
 li{
     list-style:none;
 }
+
+.container{
+    max-width:100rem;
+    margin: 0 auto;
+}
+.grid{
+    display: flex;
+    gap: 9rem;
+}
+.grid-two-column {
+    grid-template-columns: repeat(2, 1fr)
+}
+.grid-three-column {
+    grid-template-columns: repeat(3, 1fr)
+}
+.grid-four-column {
+    grid-template-columns: 1fr 1.2fr .5fr .8fr
+}
+
 `;
