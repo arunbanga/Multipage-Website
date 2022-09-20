@@ -1,7 +1,70 @@
 import React from "react";
+import styled from "styled-components";
 
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <>
+      <Wrapper>
+        <h2 className="common-heading">Feel Free to Contact us</h2>
+        <div className="container">
+          <div className="contact-form">
+            <form action="#" method="POST" className="contact-input">
+              <input
+                type="text"
+                name="username"
+                placeholder="username"
+                autoComplete="off"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                autoComplete="off"
+                required
+              />
+              <textarea
+                name="message"
+                cols="30"
+                rows="6"
+                autoComplete="off"
+                required
+              ></textarea>
+              <input type="submit" value="send" />
+            </form>
+          </div>
+        </div>
+      </Wrapper>
+    </>
+  );
 };
+const Wrapper = styled.section`
+  padding: 9rem 0 5rem 0;
+  .container {
+    margin-top: 6rem;
+    text-align: center;
+    .contact-form {
+      max-width: 50rem;
+      margin: auto;
+      .contact-input {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        input[type="submit"] {
+          cursor: pointer;
+          transition: all 0.2s;
+
+          &:hover {
+            background-color: ${({ theme }) => theme.colors.white};
+            border: 1px solid ${({ theme }) => theme.colors.btn};
+            color: ${({ theme }) => theme.colors.btn};
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default Contact;
