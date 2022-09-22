@@ -12,7 +12,9 @@ html{
     font-size:62.5%;
     overflow-x:hidden;
 }
-
+body{
+    overflow-x:hidden;
+}
 h1{
     color:${({ theme }) => theme.colors.heading}
     font-size:6rem;
@@ -90,5 +92,24 @@ input[type="submit"]{
     text-transform:uppercase;
     font-size:1.8rem;
     cursor:pointer;
+}
+@media (max-width:${({ theme }) => theme.media.tab}){
+    .container{
+        padding:0 4.2rem;
+        .grid-three-columns {
+            grid-template-columns: 1fr 1fr;
+          }
+    }
+}
+@media (max-width:${({ theme }) => theme.media.mobile}){
+    html{
+        font-size:60%;
+    }
+    .grid{
+        gap:3.2rem;
+    }
+    .grid-two-columns,.grid-three-columns,.grid-four-columns{
+        grid-template-columns:1fr;
+    }
 }
 `;

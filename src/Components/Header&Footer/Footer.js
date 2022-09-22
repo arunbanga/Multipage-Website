@@ -14,7 +14,7 @@ const Footer = () => {
               <h3>Ready to get started?</h3>
               <h3>Talk to us today</h3>
             </div>
-            <div>
+            <div className="contact-short-btn">
               <NavLink to="/">
                 <Button>Get Started</Button>
               </NavLink>
@@ -65,7 +65,7 @@ const Footer = () => {
             <hr />
             <div className="container grid grid-two-columns">
               <p>
-                @{new Date().getFullYear()} WebDeveloper.All Rights Reserved
+                @{new Date().getFullYear()} WebDeveloper.All Rights Reserved.
               </p>
               <div>
                 <p>PRIVACY POLICY</p>
@@ -87,7 +87,7 @@ const Wrapper = styled.section`
     border-radius: 1rem;
     box-shadow: ${({ theme }) => theme.colors.shadowSupport};
     transform: translateY(50%);
-    .grid div:last-child {
+    .contact-short-btn {
       justify-self: end;
       align-self: center;
     }
@@ -123,6 +123,22 @@ const Wrapper = styled.section`
         margin-bottom: ${({ theme }) => theme.colors.hr};
         heigth: 0.1px;
       }
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .contact-short {
+      max-width: 95vw;
+      padding: 2rem 0;
+      display: flex;
+      justify-content: center;
+      alugn-items: center;
+      .contact-short-btn {
+        text-align: center;
+        justify-self: flex-start;
+      }
+    }
+    footer .footer-bottom-section {
+      padding-top: 3.2rem;
     }
   }
 `;

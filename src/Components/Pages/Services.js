@@ -23,7 +23,7 @@ const Services = () => {
                   <div className="card-data">
                     <h3>{name}</h3>
                     <p>{description}</p>
-                    <NavLink to="services">
+                    <NavLink to="/services">
                       <Button className="btn">Read More</Button>
                     </NavLink>
                   </div>
@@ -93,6 +93,17 @@ const Wrapper = styled.section`
     &:hover {
       background-color: rgb(98 84 243);
       color: #fff;
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.media.tab}) {
+    .grid-three-columns {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .grid-two-columns,
+    .grid-three-columns {
+      grid-template-columns: 1fr;
     }
   }
 `;
