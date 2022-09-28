@@ -13,16 +13,16 @@ const Services = () => {
         <h2 className="common-heading">Our Services</h2>
         <div className="container grid grid-three-columns">
           {services.map((cur) => {
-            const { id, name, image, description } = cur;
+            const { id, login, avatar_url, html_url } = cur;
             return (
               <>
                 <div key={id} className="card">
                   <figure>
-                    <img src={image} alt={name} />
+                    <img src={avatar_url} alt={login} />
                   </figure>
                   <div className="card-data">
-                    <h3>{name}</h3>
-                    <p>{description}</p>
+                    <h3>{login}</h3>
+                    <p>{html_url}</p>
                     <NavLink to="/services">
                       <Button className="btn">Read More</Button>
                     </NavLink>

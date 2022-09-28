@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useReducer } from "react";
 import reducer from "./Reducer";
 const AppContext = createContext();
-const API = "https://thapareactapi.up.railway.app/";
+const API = "https://api.github.com/users";
 const intialState = {
   name: "",
   image: "",
